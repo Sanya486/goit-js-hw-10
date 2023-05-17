@@ -17,4 +17,33 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  border: 2px solid rgba(0, 64, 255, 0.369);
+
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: medium;
+}
+p {
+  margin: 0;
+  font-style: normal;
+  font-stretch: narrower;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+span {
+  font-weight: bold;
+}
+
+.plate-wrap {
+  padding: 10px;
+  border: 2px solid rgba(0, 64, 255, 0.369);
+
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: #212121;
 }
