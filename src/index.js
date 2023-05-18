@@ -33,7 +33,7 @@ function searchCountries(e) {
             name: countries[0].name.official,
             population: countries[0].population,
             capital: countries[0].capital,
-            languages: Object.values(countries[0].languages),
+            languages: Object.values(countries[0].languages).join(', '),
           });
         } else if (countries.length > 10) {
           Notify.info(
@@ -41,7 +41,15 @@ function searchCountries(e) {
           );
         }
       })
-      .catch(() => Notify.failure('Oops, there is no country with that name'));
+      .catch((error) => {
+        if (error.message === '404') {
+          Notify.failure('Oops, there is no country with that name');
+        }
+        else {
+           Notify.failure(error.message);
+        }
+      })
+       
   }
     
 }
